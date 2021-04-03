@@ -16,19 +16,29 @@ In this challenge, you will use a data set of artists to build an "influential a
 
 ### Commits
 
-Commit your code regularly and meaningfully. 
+Commit your code regularly and meaningfully.
 
 ## Interview Questions
+
 ### (please edit this file and write your answer below each question. In addition, you may also review these questions with your mentor)
 
 Please answer the following questions below, you may edit the readme file to include your answers below the question.
 
 1. How would you describe acessibility on the web to someone new to programming?
-2. Talk about 3 different things you can do to ensure your website is accessible. 
-3. How would you explain the concept of a variable to someone new to programming?
-4. What is the purpose of using functions in code?
+   An accessible website makes a website easier for the user to navigate, speciically people with disability such as vision, hearing, and movement.
 
-You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
+2. Talk about 3 different things you can do to ensure your website is accessible.
+   -Use headings correctly to organize content.
+   -Include proper alt text for images.
+   -Allow users to enlarge the font size.
+
+3. How would you explain the concept of a variable to someone new to programming?
+   Variables are names used to hold values. It's like a container that holds information you will need to use more than once in your code and makes it easier to access.
+
+4. What is the purpose of using functions in code?
+   A function is a block of code that can take in data, process it, and return a result.
+
+You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
 
@@ -39,17 +49,17 @@ Follow these steps to set up your project:
 1. Fork the repo
 2. Clone your forked version of the repo
 3. cd into your repo and create a branch with your first and last name
-NOTE: Tests will run for the JavaScript portion of this challenge only
+   NOTE: Tests will run for the JavaScript portion of this challenge only
 4. open the terminal in your vs code and type `npm install`
 5. next type `npm run test:watch` in your terminal
 6. Complete your work making regular commits, once you have all your tests passing and you are ready to submit your work please see canvas for instructions on how to submit
 
-### Task 2a:  Minimum Viable Product - Responsive Design
+### Task 2a: Minimum Viable Product - Responsive Design
 
-*Before you jump in, take 10 minutes to review the code that has already been provided for you. Take time to see how the home page was built. During this time, [Review the provided design files](design/). You have been provided all content necessary in the [index.html file](index.html) and basic styling in the [index.css file](css/index.css).*
+_Before you jump in, take 10 minutes to review the code that has already been provided for you. Take time to see how the home page was built. During this time, [Review the provided design files](design/). You have been provided all content necessary in the [index.html file](index.html) and basic styling in the [index.css file](css/index.css)._
 
-* [ ] Add a viewport meta tag to the head of your index.html page.
-* [ ] Add responsive breakpoints to your code for 500px such that your styles match the [mobile design file](design/Mobile.png).
+- [ ] Add a viewport meta tag to the head of your index.html page.
+- [ ] Add responsive breakpoints to your code for 500px such that your styles match the [mobile design file](design/Mobile.png).
 
 ### Task 2b: Minimum Viable Product - JavaScript
 
@@ -59,10 +69,9 @@ Navigate to `index.js` and complete the MVP challenges. Note that you need to sc
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-* [ ] Website is responsive at multiple breakpoints and looks good in-between breakpoints because student is using responsive units of measurement where appropriate. Student is using most semantic HTML for each element on page and has included ARIA roles where applicable (More research may be required to implement ARIA roles)  
-* [ ] Student demonstrates and can explain a deep understanding of basic programming concepts when walking Team Lead through the explanation of their code.
-* [ ] Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) - do this seperate from your MVP tasks
-
+- [ ] Website is responsive at multiple breakpoints and looks good in-between breakpoints because student is using responsive units of measurement where appropriate. Student is using most semantic HTML for each element on page and has included ARIA roles where applicable (More research may be required to implement ARIA roles)
+- [ ] Student demonstrates and can explain a deep understanding of basic programming concepts when walking Team Lead through the explanation of their code.
+- [ ] Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) - do this seperate from your MVP tasks
 
 ## Resources
 
@@ -74,4 +83,4 @@ After finishing your required elements, you can push your work further. These go
 
 ## Submission format
 
-Please see canvas for cohort specific submission instructions 
+Please see canvas for cohort specific submission instructions
