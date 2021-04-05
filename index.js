@@ -201,9 +201,6 @@ export const artists = [
     }
 ]
 
-
-//testing codegrade!
-
 // 🖌🖼 M V P 🖼🖌 //
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -214,17 +211,13 @@ Practice accessing data above by console.log-ing following items:
 artists.indexOf("name",0);
 
 //(2) Bio of the third artist (2nd index) in the array 
+
 artists.indexOf("bio",2);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-console.log($.each(artists, function() {
-  if (this.id === 8) {
-      this.name = "Vincent Van Gogh";
-  }
-}));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
  Use getArtistByIndex to do the following:
@@ -239,7 +232,6 @@ console.log($.each(artists, function() {
 }
 console.log(getArtistByIndex(artists, 0))
 
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use get20s to do the following: 
 1. Receive an array
@@ -252,9 +244,8 @@ function get20s(years){
   if (years === "1901 - 1959")
   return artists["name"]
 }
-  let years = ("1901 - 1959")
+let years = ("1901 - 1959")
 console.log(get20s(years))
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
  Use removeArtist to do the following:
@@ -269,8 +260,8 @@ console.log(get20s(years))
   artists.pop();
   return artists.length
 }
-
 console.log (removeArtist(artists))
+   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -288,11 +279,19 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(artists){
+  artists.push ( { 
+    "id": 20,
+    "name": "Your Name Here", 
+    "years": "Your Birth Year - current day",
+    "genre": "Web Design", 
+    "nationality": "Your Nationality Here",
+    "bio": "Add 1-2 sentences (or use lorem ipsum)",
   }
-
-  
+) 
+return artists
+}
+console.log (addArtist(artists))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
@@ -304,7 +303,8 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 function lotsOfArt(/*Your Code Here*/){
   /*Your Code Here*/
 }
-
+const result = artists.filter(paintings => "paintings" > 100);
+console.log(result["name"]);
 
 
 
