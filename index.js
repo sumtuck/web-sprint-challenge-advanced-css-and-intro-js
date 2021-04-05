@@ -200,26 +200,28 @@ export const artists = [
       "paintings": 328
     }
 ]
+ // 🖌🖼 M V P 🖼🖌 //
 
-// 🖌🖼 M V P 🖼🖌 //
+ /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
+ Practice accessing data above by console.log-ing following items:
+ (no functions needed) */
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
-Practice accessing data above by console.log-ing following items:
-(no functions needed) */
+ //(1) Name of the first artist (0th index) in the array
+ console.log(artists[0].name)
 
-//(1) Name of the first artist (0th index) in the array
-artists.indexOf("name",0);
+ //(2) Bio of the third artist (2nd index) in the array 
+ console.log(artists[2].bio)
 
-//(2) Bio of the third artist (2nd index) in the array 
+ /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
+ (no function needed) 
+ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-artists.indexOf("bio",2);
+ //splice can replace a value by adding it as the 3rd entry in the splice.
+ artists.splice(8,0,"Vincent Van Gough")
+ //how does it know to change the name?
+ console.log(artists[8])
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
-(no function needed) 
-There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-
-
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
+ /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
  Use getArtistByIndex to do the following:
  1. Receive an array
  2. Receive a number, which is the desired index in the array.
@@ -227,27 +229,34 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
+ //backticks make it where you dont have to use quotations marks , so when you want to refer to a parameter. When you use the backtick, to refer to a parametes, you use ${}.
  function getArtistByIndex(array, index){
-  return `the artist at index ${index} is ${array[index].name}`
-}
-console.log(getArtistByIndex(artists, 0))
+  return `the artist at index ${index} is ${array[index].name}`}
+ console.log(getArtistByIndex(artists, 0))
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
-Use get20s to do the following: 
-1. Receive an array
-2. Return a new array with names of artists who were born in and died in 20th century (1900-2000) 
+ /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
+ Use get20s to do the following: 
+ 1. Receive an array
+ 2. Return a new array with names of artists who were born in and died in 20th century (1900-2000) 
 
-Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
-If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
+ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
+ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(years){
-  if (years === "1901 - 1959")
+
+ //how does it know to look between two years since it is a string . 
+ //research changing string to integer probbaly ParseInt
+ //look up filter and map methods 
+ //arrow function is used with filter. Research arrow function
+ // && is called ampersand
+ //code is broken, I think
+ function get20s(array){
+  if (array === "1901 - 1959")
   return artists["name"]
-}
-let years = ("1901 - 1959")
-console.log(get20s(years))
+ }
+ const century20 = array.filter ((year) => year.years > "1900" && year.years < "2000"){;
+ return century20.map((name) => name.name);
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
+ /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
  Use removeArtist to do the following:
  1. Receive an array
  2. Receive a number which is the desired index in the array
@@ -256,17 +265,17 @@ console.log(get20s(years))
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
+ //reserach how to remove artist from middle
  function removeArtist(artists){
   artists.pop();
   return artists.length
-}
-console.log (removeArtist(artists))
-   
+ }
+ console.log(removeArtist(artists))
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
-Use addArtist to do the following: 
-1. Receive an array
-2. Add this object of information to the end of the array
+ /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
+ Use addArtist to do the following: 
+ 1. Receive an array
+ 2. Add this object of information to the end of the array
     { 
       id: 20,
       name: Your Name Here, 
@@ -275,11 +284,12 @@ Use addArtist to do the following:
       nationality: Your Nationality Here
       bio: Add 1-2 sentences (or use lorem ipsum)
     }  
-3. Return the resulting array
+ 3. Return the resulting array
 
-Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
+ Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(artists){
+ //mine failed without parathensis - are they required? Also, when are parathensis required?
+ function addArtist(artists){
   artists.push ( { 
     "id": 20,
     "name": "Your Name Here", 
@@ -288,82 +298,80 @@ function addArtist(artists){
     "nationality": "Your Nationality Here",
     "bio": "Add 1-2 sentences (or use lorem ipsum)",
   }
-) 
-return artists
-}
-console.log (addArtist(artists))
+ ) 
+ return artists
+ }
+ console.log (addArtist(artists))
 
-/* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-Use lotsOfArt to do the following: 
-1. Receive an array 
-2. Return an array with names of artists in the received array who painted more than 100 paintings.
+ /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+ Use lotsOfArt to do the following: 
+ 1. Receive an array 
+ 2. Return an array with names of artists in the received array who painted more than 100 paintings.
 
-For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
-
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
-}
-const result = artists.filter(paintings => "paintings" > 100);
-console.log(result["name"]);
+ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
+ //array.length means it will do through each item to see if it matches the condition
+ //square brackets because it is an empty array. When do I need a semicolon to close off a line
 
 
 
-// 🎨🎨 STRETCH 🎨🎨//
-/* 💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪 
-Programmatically console.log HTML element structure.
 
-In HTML, every artist and associated content uses the following structure: 
 
-<div id="artist">
-<div class="image">
-    <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/starry-night-by-vincent-van-gogh-vincent-van-gogh.jpg"/>
-</div>
-<div class = "name">
-   <a href="https://en.wikipedia.org/wiki/Vincent_van_Gogh"> Vincent Van Gogh</a>
-</div>
-<div class = "bio">Vincent Willem van Gogh (Dutch: [ˈvɪnsɛnt ˈʋɪləm vɑŋ ˈɣɔx] (listen); 30 March 1853 – 29 July 1890) was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. However, he was not commercially successful, and his suicide at 37 followed years of mental illness and poverty.</div>
-</div>
+  // 🎨🎨 STRETCH 🎨🎨//
+  /* 💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪 
+  Programmatically console.log HTML element structure.
 
-Create a function called `getHTML()` that takes the parameter `data` and uses a for..in loop to format and console.log data like the example above. 
+  In HTML, every artist and associated content uses the following structure: 
 
-The function should console.log 50 chunks of HTML code that match the structure above. 
+  <div id="artist">
+  <div class="image">
+      <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/starry-night-by-vincent-van-gogh-vincent-van-gogh.jpg"/>
+  </div>
+  <div class = "name">
+    <a href="https://en.wikipedia.org/wiki/Vincent_van_Gogh"> Vincent Van Gogh</a>
+  </div>
+  <div class = "bio">Vincent Willem van Gogh (Dutch: [ˈvɪnsɛnt ˈʋɪləm vɑŋ ˈɣɔx] (listen); 30 March 1853 – 29 July 1890) was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. However, he was not commercially successful, and his suicide at 37 followed years of mental illness and poverty.</div>
+  </div>
 
-‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
+  Create a function called `getHTML()` that takes the parameter `data` and uses a for..in loop to format and console.log data like the example above. 
 
-function getHTML(/* Code here */){
+  The function should console.log 50 chunks of HTML code that match the structure above. 
 
-    /* Code here */
+  ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
+  function getHTML(/* Code here */){
+
+      /* Code here */
+
+    }
+
+
+  /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
+  Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
+
+  function randomize(/* Code here */){
+
+      /* Code here */
+
+    }
+
+
+  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
+  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+
+  
+  
+  
+  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
+  function foo(){
+    console.log('its working');
+    return 'bar';
   }
-
-
-/* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
-Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
-
-function randomize(/* Code here */){
-
-    /* Code here */
-
+  /*Don't touch the code after this line! */
+  export default{
+    foo,
+    getArtistByIndex,
+    get20s,
+    removeArtist,
+    addArtist,
+    lotsOfArt
   }
-
-
- /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
- Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
-
- 
- 
- 
- /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
- function foo(){
-  console.log('its working');
-  return 'bar';
-}
-/*Don't touch the code after this line! */
-export default{
-  foo,
-  getArtistByIndex,
-  get20s,
-  removeArtist,
-  addArtist,
-  lotsOfArt
-}
