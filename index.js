@@ -312,9 +312,18 @@ export const artists = [
  //array.length means it will do through each item to see if it matches the condition
  //square brackets because it is an empty array. When do I need a semicolon to close off a line
 
+function lotsOfArt(artistsList) {  
+  let art100 = [];
+  for(let i = 0; i<artistsList.length; i++){
+    //let artOneThing = artistsList[artists];
+    if(artistsList[i].paintings> 100){
+      art100.push(artistsList[i].name)
+    };
+  }
+  return art100
+}
 
-
-
+console.log(lotsOfArt(artistsList))
 
   // 🎨🎨 STRETCH 🎨🎨//
   /* 💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪 
